@@ -97,6 +97,8 @@ def anagrams(arr)
                     end
                   end
 
+  p anagrams_list
+
   anagrams_list.uniq!.select! {|subarray| subarray.size > 1}
 
   anagrams_list.each do |anagrams| 
