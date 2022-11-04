@@ -1,4 +1,4 @@
-#Method written for previous exercise already works fro any M x N matrix.
+#Method written for previous exercise already works for any M x N matrix.
 
 def transpose(matrix)
   new_width = matrix.size
