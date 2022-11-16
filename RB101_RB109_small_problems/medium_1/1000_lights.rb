@@ -78,8 +78,9 @@ Algorithm
   - Iterate through 'light_status_arr' array and destructively transform it. Call the block parameter 'light_status'
     - Increment 'light_number' by 1.
     - Flip 'light_status' at 'light_number' % 'num' == 0 (evenly divisible)
-- Iterate through 'light_status_arr' array with an empty array passed in as an argument.
-  - If the current element in 'light_status_arr' is true, append the element's index + 1 to the array argument.
+- Initialize variable 'lights_on' to an empty array.
+- Iterate through 'light_status_arr'.
+  - If the current element in 'light_status_arr' is true, append the element's index + 1 to the 'lights_on' array.
 
 
 Code
@@ -118,7 +119,34 @@ p light(5) == [1, 4]
 
 #Further Exploration
 =begin
-I am unsure why the lights turned on are always perfect squares.
+Further Exploration # 1:
+
+After revisiting this problem, I figured out why each light that's on is a perfect square. Factors of the light number can be thought of as on-off pairs - one turns the light on, while the other turns the light off. As long as both factors in the pair are unique, there is no impact to the ending status due to the two factors. 
+
+Non-perfect squares have an even number of unique positive integer factors, meaning they will be off after n iterations.
+
+Ex: 
+
+2 has two factors: 1, 2
+
+3 has two factors: 1, 3
+
+6 has four factors: 1, 2, 3, 6
+
+12 has six factors: 1, 2, 3, 4, 6, 12
+
+The lights that remain on are perfect squares because they have an odd number of unique positive integer factors.
+
+Ex: 
+
+1 has a single factor: 1
+
+4 has three factors: 1, 2, 4
+
+9 has three factors: 1, 3, 9
+
+16 has five factors: 1, 2, 4, 8, 16   
+
 =end
 
 def light_description(n)

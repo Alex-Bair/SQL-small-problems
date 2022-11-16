@@ -130,7 +130,7 @@ def bubble_sort!(arr)
   end
 end
 
-#More than one element could be placed in the final position on a single pass. Only iterate up to the index that the last swap was performed. Single the first swap will always find the largest value and swap it to the end of the array, this method works.
+#More than one element could be placed in the final position on a single pass. Only iterate up to the index that the last swap was performed. Since the first swap will always find the largest value and swap it to the end of the array, this method works.
 
 def bubble_sort!(arr)
   penultimate_index = arr.size - 2
