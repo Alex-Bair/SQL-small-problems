@@ -1,0 +1,2 @@
+medium: many-to-many - services for each customer Further Exploration
+medium: subqueries and more - explain (focus on the explaination of the printout), comparing sql statements (focus on detailed explanation of costs)
